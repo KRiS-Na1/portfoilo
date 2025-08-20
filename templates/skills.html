@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Skills — My Portfolio{% endblock %}
+
+{% block content %}
+<!-- Add Font Awesome for extra icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  /* Fade-in animation for container */
+  .fade-in {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Card hover effect */
+  .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 123, 255, 0.3);
+  }
+
+  /* Icon transition */
+  .skill-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .skill-card:hover .skill-icon {
+    color: #0d6efd; /* Bootstrap primary */
+    transform: rotate(15deg) scale(1.1);
+  }
+</style>
+
+<div class="container fade-in">
+  <h1 class="mb-4 text-center">My Skills</h1>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!-- Python -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-brands fa-python skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">Python</h5>
+      </div>
+    </div>
+
+    <!-- Flask -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-solid fa-flask skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">Flask</h5>
+      </div>
+    </div>
+
+    <!-- HTML5 -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="bi bi-code-slash skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">HTML5</h5>
+      </div>
+    </div>
+
+    <!-- CSS3 -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="bi bi-palette-fill skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">CSS3</h5>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-brands fa-js skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">JavaScript</h5>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="bi bi-bootstrap-fill skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">Bootstrap</h5>
+      </div>
+    </div>
+
+    <!-- SQL -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-solid fa-database skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">SQL</h5>
+      </div>
+    </div>
+
+    <!-- Git -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-brands fa-git-alt skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">Git</h5>
+      </div>
+    </div>
+
+    <!-- Web App Developer -->
+    <div class="col">
+      <div class="card skill-card text-center h-100 p-3">
+        <i class="fa-solid fa-laptop-code skill-icon display-4 text-primary mb-3"></i>
+        <h5 class="card-title">Web App Developer</h5>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

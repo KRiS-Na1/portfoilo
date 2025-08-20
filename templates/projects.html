@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Projects — My Portfolio{% endblock %}
+
+{% block content %}
+<style>
+  /* Fade-in animation for container */
+  .fade-in {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Card hover effect */
+  .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 123, 255, 0.3);
+  }
+</style>
+
+<div class="container fade-in">
+  <h1 class="mb-4 text-center">My Projects</h1>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p1.png') }}" class="card-img-top" alt="Portfolio Website">
+        <div class="card-body">
+          <h5 class="card-title">Portfolio Website</h5>
+          <p class="card-text">A personal portfolio website built with Flask and Bootstrap to showcase projects and skills.</p>
+          <a href="https://github.com/yourusername/portfolio" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p3.jpg') }}" class="card-img-top" alt="Task Manager App">
+        <div class="card-body">
+          <h5 class="card-title">Task Manager App</h5>
+          <p class="card-text">A Flask app to create, update, and manage tasks with a simple and clean UI.</p>
+          <a href="https://github.com/yourusername/task-manager" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p4.png') }}" class="card-img-top" alt="Blog Platform">
+        <div class="card-body">
+          <h5 class="card-title">Blog Platform</h5>
+          <p class="card-text">A blog platform built with Flask and SQLite allowing users to post, comment, and share articles.</p>
+          <a href="https://github.com/yourusername/blog-platform" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p5.png') }}" class="card-img-top" alt="E-commerce Site">
+        <div class="card-body">
+          <h5 class="card-title">E-commerce Site</h5>
+          <p class="card-text">A full-featured online store built with Flask, featuring product management and checkout.</p>
+          <a href="#" class="btn btn-primary btn-sm disabled" tabindex="-1" aria-disabled="true">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p6.jpg') }}" class="card-img-top" alt="Chat Application">
+        <div class="card-body">
+          <h5 class="card-title">Chat Application</h5>
+          <p class="card-text">Real-time chat app using Flask-SocketIO for instant messaging.</p>
+          <a href="#" class="btn btn-primary btn-sm disabled" tabindex="-1" aria-disabled="true">View Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card project-card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='p7.png') }}" class="card-img-top" alt="Weather Dashboard">
+        <div class="card-body">
+          <h5 class="card-title">Weather Dashboard</h5>
+          <p class="card-text">A dashboard that fetches weather data from API and displays forecasts in a clean UI.</p>
+          <a href="#" class="btn btn-primary btn-sm disabled" tabindex="-1" aria-disabled="true">View Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

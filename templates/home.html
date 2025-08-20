@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Home — My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+  <!-- Your picture -->
+  <img src="{{ url_for('static', filename='DP.jpg') }}" 
+       alt="Krishna Kumar Acharya" 
+       class="rounded-circle mb-3" 
+       style="width: 160px; height: 160px; object-fit: cover; border: 4px solid #0d6efd;">
+
+  <!-- Name and study info -->
+  <h2 class="mb-0">Krishna Kumar Acharya</h2>
+  <p class="color white mb-4">DIT 2nd Year<br>Royal Institute of Management</p>
+
+  <h1 class="mb-4">About Me</h1>
+  <p>
+    I’m Krishna Kumar Acharya, currently pursuing a Diploma in Information Technology at the Royal Institute of Management.
+    As a passionate and curious IT student, I’m driven by a desire to explore how technology can solve real-world problems
+    and create innovative solutions.
+  </p>
+  <p>
+    My interests span across software development, AI and machine learning, game development, and web technologies.
+    I enjoy turning ideas into functional projects — from building chatbots and APIs to designing interactive websites
+    and experimenting with offline AI tools.
+  </p>
+  <p>
+    I’m particularly drawn to practical, hands-on learning, where I can apply theoretical knowledge to real applications.
+    Whether it’s coding in Python, developing with Flask/Django, experimenting with Unity, or creating polished,
+    user-friendly designs, I focus on producing results that are both functional and professional.
+  </p>
+  <p>
+    Beyond academics, I believe in continuous learning, problem-solving, and staying updated with emerging technologies —
+    all while keeping a balance of creativity and technical precision. My ultimate goal is to grow into a skilled IT
+    professional capable of contributing to impactful tech solutions.
+  </p>
+
+  <!-- Social Media Icons -->
+  <div class="mt-4">
+    <h5>Connect with me:</h5>
+    <a href="https://github.com/yourusername" target="_blank" class="text-decoration-none me-3" aria-label="GitHub">
+      <i class="bi bi-github" style="font-size: 2rem;"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-decoration-none me-3" aria-label="LinkedIn">
+      <i class="bi bi-linkedin" style="font-size: 2rem; color:#0A66C2;"></i>
+    </a>
+    <a href="https://twitter.com/yourusername" target="_blank" class="text-decoration-none me-3" aria-label="Twitter">
+      <i class="bi bi-twitter" style="font-size: 2rem; color:#1DA1F2;"></i>
+    </a>
+    <a href="mailto:your.email@example.com" target="_blank" class="text-decoration-none me-3" aria-label="Email">
+      <i class="bi bi-envelope-fill" style="font-size: 2rem; color:#D44638;"></i>
+    </a>
+  </div>
+</div>
+{% endblock %}
